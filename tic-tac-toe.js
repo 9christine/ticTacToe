@@ -75,3 +75,7 @@ const takeATurn = (player) => {
     }
   });
 }
+
+console.log('X starts game. Choose location number to place your X'); 
+redrawBoard();
+takeATurn('X');
