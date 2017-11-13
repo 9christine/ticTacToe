@@ -30,8 +30,19 @@ const makeAMove = (letter, location) => {
 }
 
 const checkForWin = (player) => {
-// use tracking variable to check against winning lines
-
+  let trackCheck = 0;
+  for (let i = 0; i < winningLines.length; i++) {
+    trackCheck = 0;
+    for (let j = 0; j < winningLines[i].length; j++) {
+      if (board[winningLines[i][j]] === player) {
+        trackCheck++;
+      }
+      if (trackCheck === 3) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 const redrawBoard = () => {
