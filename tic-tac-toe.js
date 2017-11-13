@@ -56,7 +56,22 @@ const redrawBoard = () => {
 
 
 const takeATurn = (player) => {
-// get playing input from prompt
-// invoke makeAMove and redrawBoard
-// switch players and call this function
+  console.log(player);
+  prompt.start();
+
+  prompt.get(['number'], (err, result) => {
+
+    makeAMove(player, result.number);
+    redrawBoard();
+
+    if (checkForWin(player) === true) {
+      console.log(player, 'wins!');
+      return 1;
+    }
+    if (player === 'X') {
+      takeATurn('O');
+    } else if (player === 'O') {
+      takeATurn('X');
+    }
+  });
 }
