@@ -1,7 +1,6 @@
 TIC-TAC-TOE
 ---------------
-Command-line Node.js game
-Play on the command line.
+Command-line Node.js game to play on the command line.
 
 
 TO RUN PROGRAM
